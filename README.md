@@ -50,8 +50,8 @@ Unit tests are provided to ensure the correctness of the ETL components. Tests c
 
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/Jaysen-Ma/mt5-data-etl.git
-   cd mt5-data-etl
+   git clone https://github.com/Jaysen-Ma/mt5-python-etl.git
+   cd mt5-python-etl
    ```
 
 2. **Install dependencies**:
