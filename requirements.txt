@@ -1,0 +1,7 @@
+MetaTrader5==5.0.4424
+python-dotenv==1.0.1
+retry==0.9.2
+numpy==1.26.4
+pandas==2.1.4
+scipy==1.14.1
+arcticdb==4.5.0

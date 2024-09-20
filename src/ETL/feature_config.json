@@ -1,0 +1,76 @@
+{
+    "symbol_specific": {
+        "Moving_Averages": {
+            "SMA": {
+                "length": [10, 20, 50, 100],
+                "description": "Simple Moving Average over 'length' periods"
+            },
+            "EMA": {
+                "length": [10, 20, 50, 100],
+                "description": "Exponential Moving Average over 'length' periods"
+            },
+            "WMA": {
+                "length": [10, 20, 50, 100],
+                "description": "Weighted Moving Average over 'length' periods"
+            }
+        },
+        "Momentum_Indicators": {
+            "RSI": {
+                "length": [14, 21],
+                "description": "Relative Strength Index over 'length' periods"
+            },
+            "MACD": {
+                "fast": [12, 24],
+                "slow": [26, 52],
+                "signal": [9, 18],
+                "description": "Moving Average Convergence Divergence with fast='fast', slow='slow', signal='signal'"
+            },
+            "STOCH": {
+                "k": [14, 21],
+                "d": [3, 6],
+                "description": "Stochastic Oscillator with k='k', d='d'"
+            }
+        },
+        "Volatility_Indicators": {
+            "BBANDS": {
+                "length": [20, 30],
+                "std": [2],
+                "description": "Bollinger Bands over 'length' periods with std='std'"
+            },
+            "ATR": {
+                "length": [14, 21],
+                "description": "Average True Range over 'length' periods"
+            },
+            "Volatility": {
+                "window": [20, 50],
+                "description": "'window'-period rolling standard deviation of returns"
+            }
+        },
+        "Volume_Indicators": {
+            "OBV": {
+                "description": "On-Balance Volume"
+            },
+            "CMF": {
+                "length": [20, 30],
+                "description": "Chaikin Money Flow over 'length' periods"
+            }
+        },
+        "Price_Transformations": {
+            "LogReturns": {
+                "description": "Log returns of close prices"
+            },
+            "PctChange": {
+                "periods": [1, 5, 10],
+                "description": "Percentage change over 'periods' periods"
+            },
+            "ZScore": {
+                "window": [20, 50],
+                "description": "'window'-period Z-Score of close prices"
+            }
+        }
+    },
+    "universal": {
+        "Global_Metrics": ["AverageCloseAllSymbols", "MedianVolumeAllSymbols"],
+        "Correlation_Metrics": ["ClosePriceCorrelation"]
+    }
+}
