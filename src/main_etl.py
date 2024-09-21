@@ -36,7 +36,7 @@ class Mt5_ArcticDB_ETL:
     """
 
     def __init__(self, 
-                 metadata_path: str = '../TimeSeriesDB/metadata.json') -> None:
+                 metadata_path: str = 'TimeSeriesDB/metadata.json') -> None:
         """
         Initialize the ETL process with the given library name, metadata path, and database path.
         """
@@ -84,6 +84,7 @@ class Mt5_ArcticDB_ETL:
                 "symbols": {},
                 "etl_runs": []
             }
+            self.metadata_path = 'TimeSeriesDB/metadata.json'
             self.save_metadata(metadata)
             return metadata
 
@@ -296,7 +297,7 @@ class Mt5_ArcticDB_ETL:
 
 if __name__ == "__main__":
     # Initialize ETL class
-    etl = Mt5_ArcticDB_ETL()
+    etl = Mt5_ArcticDB_ETL(metadata_path = 'TimeSeriesDB/metadata.json')
     
     # Add symbols, for example from a text file
     with open('src/data_selection/core_symbols.txt', 'r') as f:

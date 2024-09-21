@@ -23,7 +23,7 @@ class FeatureEngineer:
         logger.info(f"Calculated maximum lookback: {self.max_lookback} minutes")
 
         # Load feature configuration from JSON
-        with open('ETL/feature_config.json', 'r') as f:
+        with open('src/ETL/feature_config.json', 'r') as f:
             self.feature_config = json.load(f)
 
     def calculate_max_lookback(self) -> int:

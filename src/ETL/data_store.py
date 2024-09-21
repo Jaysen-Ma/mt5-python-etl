@@ -14,7 +14,7 @@ class DataStore:
             library_name (str): The name of the library to store data in.
         """
         if DataStore._arctic_instance is None:
-            DataStore._arctic_instance = adb.Arctic("lmdb://../TimeSeriesDB")
+            DataStore._arctic_instance = adb.Arctic("lmdb://TimeSeriesDB")
         self.library_name = library_name
         self.lib = DataStore._arctic_instance.get_library(self.library_name, create_if_missing=True)
 
