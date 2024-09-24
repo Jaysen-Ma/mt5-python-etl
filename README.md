@@ -1,6 +1,6 @@
 # ETL for MT5 Based Data
 
-This repository contains an ETL (Extract, Transform, Load) pipeline designed to process and store financial data from MetaTrader5 into a local database using ArcticDB. The ETL process includes fetching raw data, applying various financial features, and storing both symbol-specific and universal features. 
+This repository contains an ETL (Extract, Transform, Load) pipeline designed to process and store financial data from MetaTrader5 into a S3 bucket using ArcticDB. The ETL process includes fetching raw data, applying various financial features, and storing both symbol-specific and universal features. 
 
 ## Folder Structure
 
@@ -17,9 +17,6 @@ This repository contains an ETL (Extract, Transform, Load) pipeline designed to 
 
 ### `tests`
 - Contains unit tests for various components of the ETL pipeline to ensure correctness and reliability.
-
-### `TimeSeriesDB`
-- Directory for storing the ArcticDB database files.
 
 ## Key Components
 

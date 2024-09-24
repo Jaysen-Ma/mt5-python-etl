@@ -10,11 +10,15 @@ from dotenv import load_dotenv
 import MetaTrader5 as mt5
 from os import environ
 import json
+from dotenv import load_dotenv
 
 from ETL.data_fetcher import DataFetcher
 from ETL.feature_engineer import FeatureEngineer
 from ETL.data_store import DataStore
 from ETL.feature_definitions import symbol_specific_features, universal_features
+
+# Load environment variables at the very beginning
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -32,7 +36,7 @@ logger.addHandler(ch)
 
 class Mt5_ArcticDB_ETL:
     """
-    ETL class for processing and storing financial data from MetaTrader5 to a local folder with ArcticDB.
+    ETL class for processing and storing financial data from MetaTrader5 to a S3 bucket with ArcticDB.
     """
 
     def __init__(self, 
