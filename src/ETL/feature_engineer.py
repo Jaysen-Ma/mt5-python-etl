@@ -146,6 +146,7 @@ class FeatureEngineer:
                 logger.error(f"TypeError applying feature {feature_cls.__name__}: {te}")
             except Exception as e:
                 logger.error(f"Error applying feature {feature_cls.__name__}: {e}")
+        df.rename(columns={'tick_volume': 'volume'}, inplace=True)
         return df
 
     def apply_universal_features(self, df: pd.DataFrame, feature_classes: List[Type[BaseFeature]]) -> pd.DataFrame:
